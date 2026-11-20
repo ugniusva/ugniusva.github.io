@@ -1,0 +1,162 @@
+/* Typography and colors */
+:root {
+  --default-font: "Segoe UI", system-ui, sans-serif;
+  --heading-font: Georgia, serif;
+  --nav-font: var(--default-font);
+  --default-color: #243533;
+  --heading-color: #153c37;
+  --accent-color: #00665b;
+  --nav-hover-color: var(--accent-color);
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.section-title h2 {
+  font-size: 2.25rem;
+}
+
+.resume .resume-item h4 {
+  color: var(--heading-color);
+  line-height: 1.35;
+  text-transform: none;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+/* Links and buttons */
+main a,
+.footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+main a:hover,
+.footer a:hover {
+  color: #004c43;
+}
+
+.header .header-toggle,
+.scroll-top {
+  background-color: var(--accent-color);
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+}
+
+.header .header-toggle:hover,
+.scroll-top:hover {
+  background-color: #004c43;
+}
+
+.header .header-toggle:active,
+.scroll-top:active {
+  background-color: #00382f;
+  transform: translateY(2px);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 3px;
+}
+
+/* About, Resume, and Portfolio */
+#about,
+#resume,
+#portfolio {
+  padding-block: 4.5rem;
+}
+
+#about .section-title,
+#resume .section-title,
+#portfolio .section-title {
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#about .content,
+#resume .resume-item,
+#portfolio .card {
+  padding: 1.25rem;
+  border: 1px solid #c4d6d1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(21 60 55 / 10%);
+}
+
+#resume .resume-item {
+  margin: 0 0 1rem;
+}
+
+#resume .resume-item::before {
+  content: none;
+}
+
+/* Navigation and footer */
+.navmenu a,
+.navmenu a:focus {
+  border: 1px solid #c4d6d1;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgb(21 60 55 / 15%);
+}
+
+#footer {
+  background-color: #e5f0ed;
+  border-top: 3px solid var(--accent-color);
+  padding: 2.5rem 0;
+}
+
+/* Services lists */
+#services ul > li::marker {
+  content: "◆  ";
+  color: var(--accent-color);
+}
+
+#services ol {
+  list-style-type: decimal-leading-zero;
+}
+
+#services ol > li::marker {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+#services ul ul {
+  padding-left: 1.25rem;
+}
+
+#services ul ul > li::marker {
+  content: "○  ";
+  color: #42635d;
+}
+
+/* Services table */
+#services .table {
+  --bs-table-border-color: #b4ccc5;
+}
+
+#services .table th,
+#services .table td {
+  padding: 0.85rem;
+  text-align: center;
+}
+
+#services thead th {
+  background-color: #153c37;
+  color: white;
+}
+
+#services tbody tr:nth-child(even) > * {
+  background-color: #e5f0ed;
+}
+
+/* Keep the hero inside the page */
+.header ~ main .hero {
+  width: auto;
+}

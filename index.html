@@ -28,6 +28,7 @@
 
   <!-- Site styles -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +36,7 @@
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <button type="button" class="header-toggle d-xl-none bi bi-list" aria-label="Toggle navigation"></button>
 
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -328,7 +329,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#hero" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+  <button type="button" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></button>
 
   <!-- Preloader -->
   <div id="preloader"></div>
