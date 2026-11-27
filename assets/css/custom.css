@@ -160,3 +160,74 @@ button:focus-visible {
 .header ~ main .hero {
   width: auto;
 }
+
+/* Skill progress */
+.skill-summary,
+.skill-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.skill-summary,
+.skill-board > div {
+  padding: 1rem;
+  border-radius: 12px;
+  background: #edf5f2;
+}
+
+.skill-board p {
+  margin: 0.5rem 0 0;
+  padding: 0.75rem;
+  border-left: 3px solid var(--accent-color);
+  background: white;
+}
+
+#level-xp {
+  display: block;
+  width: 100%;
+  accent-color: var(--accent-color);
+}
+
+/* Services gradient */
+#services {
+  background: linear-gradient(115deg, #f0f7f4, #cce5df, #f6efdf);
+  background-size: 200% 100%;
+  animation: gradient-slide 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-slide {
+  to { background-position: 100% 0; }
+}
+
+/* Shapes beside the About heading */
+#about .section-title::before,
+#about .section-title::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--accent-color);
+  animation: shape-float 3s ease-in-out infinite alternate;
+}
+
+#about .section-title::before {
+  right: calc(50% + 5rem);
+  border-radius: 50%;
+}
+
+#about .section-title::after {
+  left: calc(50% + 5rem);
+  animation-direction: alternate-reverse;
+}
+
+@keyframes shape-float {
+  to { transform: translateY(0.5rem) rotate(20deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #services, #about .section-title::before, #about .section-title::after {
+    animation: none;
+  }
+}
